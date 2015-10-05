@@ -10,11 +10,30 @@
             {!! Form::open(array( 'class' => 'form')) !!}
 
             <div class="form-group">
-                {!! Form::label('Select Month') !!}
-                {!! Form::date('month', null,
+                {!! Form::select('month',
+                                  array('1' => 'January',
+                                        '2' => 'February',
+                                        '3' => 'March',
+                                        '4' => 'April',
+                                        '5' => 'May',
+                                        '6' => 'June',
+                                        '7' => 'July',
+                                        '8' => 'August',
+                                        '9' => 'September',
+                                        '10' => 'October',
+                                        '11' => 'November',
+                                        '12' => 'December'),
+                                  null,
+                                  ['placeholder' => 'Select Month',
+                                  'class'=>'form-control']) !!}
+            </div>
+
+            <div class="form-group">
+                {!! Form::label('Input School Year') !!}
+                {!! Form::text('sy', null,
                                 array('required',
                                 'class'=>'form-control',
-                                'placeholder'=>'Select Month')) !!}
+                                'placeholder'=>'School Year ex. 2015-2016')) !!}
             </div>
 
             <div class="row">
