@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{!! asset('styles/adminStyles.css') !!}" >
 
 </head>
-<body class="index-login-bg">7
+<body class="index-login-bg">
       <div class="col-md-4 col-md-offset-4">
         <img src="{!! asset('images/uc_logo.png') !!}" class="index-img-responive"/>
           <div class="panel panel-default index-panel">
