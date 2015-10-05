@@ -10,11 +10,11 @@
             {!! Form::open(array( 'class' => 'form')) !!}
 
             <div class="form-group">
-                {!! Form::label('Select School Year') !!}
-                {!! Form::date('year', null,
+                {!! Form::label('Input School Year') !!}
+                {!! Form::text('sy', null,
                                 array('required',
                                 'class'=>'form-control',
-                                'placeholder'=>'Select School Year')) !!}
+                                'placeholder'=>'School Year ex. 2015-2016')) !!}
             </div>
 
             <div class="row">
