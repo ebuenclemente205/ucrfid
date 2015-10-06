@@ -15,10 +15,11 @@
 //     return view('master');
 // });
 
-Route::get('/', 'PagesController@home');
+Route::get('/', 'PagesController@index');
+//Route::get('index', 'PagesController@index');
 Route::get('home', 'PagesController@home');
-Route::get('/adminLayouts/admin_createUser', 'PagesController@adminCreateUser');
-Route::get('/adminLayouts/admin_usersList', 'PagesController@adminUsersList');
+// Route::get('/adminLayouts/admin_createUser', 'PagesController@adminCreateUser');
+// Route::get('/adminLayouts/admin_usersList', 'PagesController@adminUsersList');
 Route::get('/sharedLayouts/messageCreate', 'PagesController@messageCreate');
 Route::get('/sharedLayouts/messagesCurrent', 'PagesController@messageListCurrent');
 Route::get('/sharedLayouts/messagesDone', 'PagesController@messageListDone');
@@ -29,3 +30,7 @@ Route::get('/reports/reportLibWeekly_Form', 'PagesController@reportLibWeekly_For
 Route::get('/reports/reportLibMonthly_Form', 'PagesController@reportLibMonthly_Form');
 Route::get('/reports/reportLibSemestral_Form', 'PagesController@reportLibSemestral_Form');
 Route::get('/reports/reportLibSchoolYear_Form', 'PagesController@reportLibSchoolYear_Form');
+
+Route::get('/admin', 'AdminController@index');
+Route::get('/admin/users', 'AdminController@users');
+Route::get('/admin/users/create', 'AdminController@create');

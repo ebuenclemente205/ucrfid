@@ -5,7 +5,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="javascript:void(0)">University of Cebu</a>
+        <a class="navbar-brand" href="{{ URL::to('home')}}">University of Cebu</a>
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
 
@@ -14,8 +14,8 @@
             <li class="dropdown">
                 <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                    <li><a href="{{ URL::to('adminLayouts/admin_createUser')}}">Create Account</a></li>
-                    <li><a href="{{ URL::to('adminLayouts/admin_usersList')}}">Users List</a></li>
+                    <li><a href="{{ URL::to('admin/users/create')}}">Create Account</a></li>
+                    <li><a href="{{ URL::to('admin/users')}}">Users List</a></li>
                 </ul>
             </li>
             <li class="dropdown">
