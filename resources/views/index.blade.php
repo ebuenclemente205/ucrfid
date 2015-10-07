@@ -11,14 +11,13 @@
     <link rel="stylesheet" type="text/css" href="{!! asset('styles/adminStyles.css') !!}" >
 
 </head>
-<body class="index-login-bg">7
+<body class="index-login-bg">
     <div class="col-md-4 col-md-offset-4">
       <img src="{!! asset('images/uc_logo.png') !!}" class="index-img-responive"/>
         <div class="panel panel-default index-panel">
           <div class="panel-heading index-form">
 
             {!! Form::open(array( 'class' => 'form', 'url' => 'auth/login')) !!}
-            
                 <div class="form-group">
                     {!! Form::text('idno', null,
                                     array('required',
@@ -47,12 +46,13 @@
                 </div>
 
                 {!! Form::close() !!}
+
                 @if(Session::has('flash_message'))
                   <div class="alert alert-danger">
                     {{ Session::get('flash_message') }}
                   </div>
                 @endif
-
+                
           </div>
         </div>
       </div>
