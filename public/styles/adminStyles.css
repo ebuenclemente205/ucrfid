@@ -1,0 +1,32 @@
+.create-user-btn{
+  width: 100%;
+
+  .form-control{
+        background-image: linear-gradient(#3F51B5,#3F51B5),linear-gradient(#d2d2d2,#d2d2d2) !important;
+  }
+}
+
+.index-login-bg {
+  background-color: #1b4e83;
+}
+
+.index-img-responive {
+  display: block;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.index-panel {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.index-form {
+  padding-top: 20px;
+}
+
+.index-submit-btn {
+  width: 100%;
+  background-color: #5ca0c7;
+}
