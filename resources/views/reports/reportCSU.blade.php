@@ -8,7 +8,6 @@
         <div class="panel-heading">
             <h2> Reports </h2>
         </div>
-
         <table class="table table-striped">
           <thead>
               <tr>

@@ -15,11 +15,6 @@ class PagesController extends Controller
      *
      * @return Response
      */
-     public function index()
-     {
-       return view('index');
-     }
-
     public function home()
     {
         return view('home');
