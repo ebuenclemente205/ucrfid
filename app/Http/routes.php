@@ -24,12 +24,12 @@ Route::get('/sharedLayouts/messageCreate', 'PagesController@messageCreate');
 Route::get('/sharedLayouts/messagesCurrent', 'PagesController@messageListCurrent');
 Route::get('/sharedLayouts/messagesDone', 'PagesController@messageListDone');
 Route::get('/sharedLayouts/search', 'PagesController@search');
-Route::get('/reports/reportCSU', 'PagesController@reportCSU');
-Route::get('/reports/reportLibDaily_Form', 'PagesController@reportLibDaily_Form');
-Route::get('/reports/reportLibWeekly_Form', 'PagesController@reportLibWeekly_Form');
-Route::get('/reports/reportLibMonthly_Form', 'PagesController@reportLibMonthly_Form');
-Route::get('/reports/reportLibSemestral_Form', 'PagesController@reportLibSemestral_Form');
-Route::get('/reports/reportLibSchoolYear_Form', 'PagesController@reportLibSchoolYear_Form');
+// Route::get('/reports/reportCSU', 'PagesController@reportCSU');
+// Route::get('/reports/reportLibDaily_Form', 'PagesController@reportLibDaily_Form');
+// Route::get('/reports/reportLibWeekly_Form', 'PagesController@reportLibWeekly_Form');
+// Route::get('/reports/reportLibMonthly_Form', 'PagesController@reportLibMonthly_Form');
+// Route::get('/reports/reportLibSemestral_Form', 'PagesController@reportLibSemestral_Form');
+// Route::get('/reports/reportLibSchoolYear_Form', 'PagesController@reportLibSchoolYear_Form');
 
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/users/', 'AdminController@users');
@@ -44,3 +44,26 @@ Route::post('auth/login', 'AuthController@login');
 Route::get('auth/logout', 'AuthController@logout');
 
 Route::get('/user', 'UserController@index');
+
+//Reports
+Route::get('/reports/reportCSU/', 'CtrsController@index');
+
+Route::get('/reports/daily', 'ReportsController@reportdaily');
+Route::post('/reports/daily', 'ReportsController@storedaily');
+Route::get('/reports/daily/show/{date?}', 'ReportsController@showdaily');
+
+Route::get('/reports/weekly', 'ReportsController@reportweekly');
+Route::post('/reports/weekly', 'ReportsController@storeweekly');
+Route::get('/reports/weekly/show/{startdate?}/{enddate?}', 'ReportsController@showweekly');
+
+Route::get('/reports/monthly', 'ReportsController@reportmonthly');
+Route::post('/reports/monthly', 'ReportsController@storemonthly');
+Route::get('/reports/monthly/show/{month?}/{year?}', 'ReportsController@showmonthly');
+
+Route::get('/reports/semestral', 'ReportsController@reportsemestral');
+Route::post('/reports/semestral', 'ReportsController@storesemestral');
+Route::get('/reports/semestral/show/{semester?}/{year?}', 'ReportsController@showsemestral');
+
+Route::get('/reports/yearly', 'ReportsController@reportyearly');
+Route::post('/reports/yearly', 'ReportsController@storeyearly');
+Route::get('/reports/yearly/show/{month?}/{year?}', 'ReportsController@showyearly');

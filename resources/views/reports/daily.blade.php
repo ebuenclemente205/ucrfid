@@ -7,9 +7,14 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h2> Create Daily Report </h2>
+            @foreach($errors->all() as $error)
+                <p class="alert alert-danger"> {{ $error }}</p>
+            @endforeach
+            
             {!! Form::open(array( 'class' => 'form')) !!}
 
-            <!-- <div class="form-group">
+
+            <div class="form-group">
                   {!! Form::label('Date') !!}
                   <div class="input-group date form_date col-md-12" data-date="" data-date-format="yyyy-MM-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd" >
                       {!! Form::text('date', null,
@@ -23,9 +28,9 @@
 	                </div>
 
 							<input type="hidden" id="dtp_input2" value="" /><br/>
-			      </div> -->
+			      </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 {!! Form::select('month',
                                   array('1' => 'January',
                                         '2' => 'February',
@@ -58,7 +63,7 @@
                                 array('required',
                                 'class'=>'form-control',
                                 'placeholder'=>'Year')) !!}
-            </div>
+            </div> -->
 
             <!-- <div class="form-group">
                 {!! Form::label('Date') !!}

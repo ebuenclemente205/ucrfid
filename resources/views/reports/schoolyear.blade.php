@@ -7,11 +7,14 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <h2> Create School Year Report </h2>
+            @foreach($errors->all() as $error)
+                <p class="alert alert-danger"> {{ $error }}</p>
+            @endforeach
             {!! Form::open(array( 'class' => 'form')) !!}
 
             <div class="form-group">
                 {!! Form::label('Input School Year') !!}
-                {!! Form::text('sy', null,
+                {!! Form::text('year', null,
                                 array('required',
                                 'class'=>'form-control',
                                 'placeholder'=>'School Year ex. 2015-2016')) !!}
