@@ -1,39 +1,28 @@
 @extends('master')
-@section('title', 'Create Monthly Report')
+@section('title', 'Create Semestral Report')
 
 @section('content')
 
   <div class="container col-md-4 col-md-offset-4">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h2> Create Monthly Report </h2>
+            <h2> Create Semestral Report </h2>
             {!! Form::open(array( 'class' => 'form')) !!}
 
             <div class="form-group">
-                {!! Form::select('month',
-                                  array('1' => 'January',
-                                        '2' => 'February',
-                                        '3' => 'March',
-                                        '4' => 'April',
-                                        '5' => 'May',
-                                        '6' => 'June',
-                                        '7' => 'July',
-                                        '8' => 'August',
-                                        '9' => 'September',
-                                        '10' => 'October',
-                                        '11' => 'November',
-                                        '12' => 'December'),
+                {!! Form::select('semester',
+                                  array('1' => '1st Semester', '2' => '2nd Semester', '4' => 'Summer'),
                                   null,
-                                  ['placeholder' => 'Select Month',
+                                  ['placeholder' => 'Select Semester',
                                   'class'=>'form-control']) !!}
             </div>
 
             <div class="form-group">
                 {!! Form::label('Input School Year') !!}
-                {!! Form::text('sy', null,
+                {!! Form::text('year', null,
                                 array('required',
                                 'class'=>'form-control',
-                                'placeholder'=>'School Year ex. 2015-2016')) !!}
+                                'placeholder'=>'Ex. input 2015 for SY 2015-2016')) !!}
             </div>
 
             <div class="row">

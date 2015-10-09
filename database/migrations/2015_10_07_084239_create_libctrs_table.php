@@ -15,6 +15,7 @@ class CreateLibctrsTable extends Migration
         Schema::create('libctrs', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
+            $table->integer('semester');
             $table->integer('ctr');
             $table->timestamps();
         });

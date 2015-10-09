@@ -38,16 +38,22 @@
 	    $(document).ready(function() {
 	        // This command is used to initialize some elements and make them work properly
 	        $.material.init();
+
+
 	    });
 
       $('.form_date').datetimepicker({
-		        startDate: "+1d",
-		        format: "MM dd yyyy",
-				autoclose: 1,
-				startView: 2,
-				minView: 2,
-				forceParse: 0
-		    });
+	        //startDate: "+1d",
+	        format: "yyyy-mm-dd",
+  				autoclose: 1,
+  				startView: 2,
+  				minView: 2,
+  				forceParse: 0
+	    });
+
+
+
+
 	</script>
 
 </body>

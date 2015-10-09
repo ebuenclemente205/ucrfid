@@ -15,6 +15,7 @@ class CreateGendercoursectrsTable extends Migration
         Schema::create('gendercoursectrs', function (Blueprint $table) {
             $table->increments('id');
             $table->date('date');
+            $table->integer('semester');
             $table->string('Course', 5);
             $table->boolean('gender');
             $table->integer('ctr');
